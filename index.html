@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="normalize.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></link>
     <link rel="stylesheet" href="styles/base.css"></link>
@@ -26,18 +27,55 @@
       <li class="button" id="about-button" data-content="about"><a href="#"> About </a></li>
     </ul>
   </section>
+  <div class="filters">
+    <ul id="filters">
+      <li>
+        <select id="category-filter">
+          <option value="categories">Filter by Categories</option>
+          <option value="website">Website</option>
+          <option value="content">Content</option>
+        </select>
+      </li>
+    </ul>
   </div>
-</div>
+<section id="blogPosts">
+    <blogPost class="template">
+      <div class="header">
+        <header class="headline">
+  <h2>My Projects</h2>
+  <p class="publishedOn">Posted<time id="publishedOn">Date</time></p>
+  <section class="blogBody" data-category="Projects">Blog Body Here</section>
+  <img src >
+  <a class="slider" href="#">View More</a>
+        </header>
+      </div>
+  </div>
+</section>
+<section id="about-me">
+  <blogPost id="aboutBlogPost">
+    <h2>Rachel Burke in Context</h2>
+    <p></p>
+    <h2>Personal Life</h2>
+    <ul class="personal">
+      <li>content</li>
+      <li>something</li>
+      <li>something</li>
+      <li>Reading</li>
+    </ul>
+  </section>
 </main>
+  <ul class="social nav">
     <li><a href="https://github.com/THXBurke" target="" class="icon-github"> GitHub </a></li>
     <li><a href="https://www.instagram.com/rasynchronousb/" target="" class="icon-instagram"> Instagram </a></li>
     <li><a href="http://www.linkedin.com/in/rachelwheels/" class="icon-linkedin"> Linked In </a></li>
-  </main>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="scripts/blogArticles.js"></script>
-  <script src="scripts/portfolio.js"></script>
-</body>
+  </ul>
   <footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="scripts/blogPosts.js"></script>
+  <script src="scripts/portfolio.js"></script>
+<p>
   Code Fellows Student August 2015 to Current | rachelwheels@gmail.com
+</p>
   </footer>
+</body>
 </html>
