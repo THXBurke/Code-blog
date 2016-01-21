@@ -13,7 +13,7 @@ function blogPost (options) {
 blogPost.prototype.toHtml = function() {
   $newblogPost = $('blogPost.template').clone();
   $newblogPost.removeClass('template');
-  $newblogPost.find('about-me').text(this.title);
+  $newblogPost.find('#about-me').text(this.title);
   $newblogPost.find('time').text(this.publishedOn);
   $newblogPost.find('.blogBody').attr('data-category', this.category);
   $newblogPost.find('.blogBody').html(this.body);
