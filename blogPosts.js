@@ -14,14 +14,14 @@ blogPost.prototype.toHtml = function() {
   $newblogPost = $('blogPost.template').clone();
   $newblogPost.removeClass('template');
   $newblogPost.find('#about-me').text(this.title);
-  $newblogPost.find('time').text(this.publishedOn);
+  $newblogPost.find('#time').text(this.publishedOn);
   $newblogPost.find('.blogBody').attr('data-category', this.category);
   $newblogPost.find('.blogBody').html(this.body);
 
   return $newblogPost;
 };
 
-blogPostData.forEach(function(p) {
+blogPosts.forEach(function(p) {
   blogPosts.push(new blogPost(p));
 });
 
