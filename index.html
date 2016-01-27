@@ -13,6 +13,19 @@
     <link rel="stylesheet" href="themes.css"></link>
     <link rel="stylesheet" href="stylesheet.css"></link>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script id="template" type="x-handlebars-template">
+      <article>
+        <div class="header">
+          <header class="headline">
+            <h2>{{{title}}}</h2>
+              <p class="publishedOn">Date Posted<time id="postedWhen">{{{posted}}}</time></p>
+              <section class="projectBrief" data-category={{{category}}}>{{{}}}</section>
+              <a class="slider" href="#">View More</a>
+          </header>
+        </div>
+      </article>
+    </script>
   <a name="home"></a>
   </head>
 
@@ -24,7 +37,7 @@
     <img src="RachelinSantaFe.jpg" height="200px" width="200px">
     <main>
     <h3>Luddite goes to code school and loves it? </br> Find out more here!</h3>
-    <div class="icon menu">
+
     <ul>
       <li class="button" id="home-button" data-content="articles"><a href="#home"> Home </a></li>
       <li class="button" id="about-button" data-content="about"><a href="#about"> About </a></li>
@@ -41,21 +54,21 @@
       </li>
     </ul>
   </div>
-<section id="blogPosts">
-    <blogPost class="template">
+<section id="">
+    <Project class="template">
       <div class="header">
         <header class="headline">
   <h2>Website Development</h2>
-  <a name="about">
+  <a name="about"></a>
   <p class="publishedOn">Posted<time id="publishedOn"> Date</time></p>
   <section class="blogBody" data-category="Professional"></section>
   <img src >
-  <a class="slider" href="#">View More</a>
+  <a class="slider" href="#View">View More</a>
         </header>
       </div>
   </div>
 </section>
-<section id="about-me">
+<section id="personal">
   <blogPost id="aboutBlogPost">
     <h2>Rachel Burke in Context</h2>
     <p>My classmates think I didn't own a computer until I started this class and that's a fun story. The truth is that I did but they were always very outdated hand me downs that caused me great frustration. One of them shut down pretty regularly just because it wanted to. Someone took pity on me and gave me one which was great except for the screen would pop out and I'd be left with green zig zags, some text and more frustration. I don't have anything against technology I just felt left out because I didn't understand it very well, couldn't affort to keep up with it and that all intimidated and confounded me.</p>
