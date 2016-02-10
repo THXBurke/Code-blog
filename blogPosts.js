@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
-  var projects = [];
-
-  function Project (options) {
+  function BlogPost (options) {
     this.title = options.title;
     this.category = options.category;
     this.author = options.author;
@@ -10,18 +8,25 @@ $(document).ready(function() {
     this.body = options.body;
   }
 
-  Project.prototype.toHtml = function() {
+  BlogPost.prototype.toHtml = function() {
     var template = $('#template').html();
-    var compiledTemplate = Handlebars.compiledTemplate;
+    var compiledTemplate = Handlebars.compile(template);
     return compiledTemplate(this);
   };
 
-  blogPosts.forEach(function(p) {
-    projects.push(new blogPost(p));
-  });
+  var importedBlogPosts = [];
+  var blogPosts = [];
 
-  projects.forEach(function(e) {
-    $blogPosts = $('#blogPosts');
-    $blogPosts.append(e.toHtml());
+  $.getJSON('blogPosts.json', function(data) {
+    importedBlogPosts = data;
+    importedBlogPosts.forEach(function(post) {
+      blogPosts.push(new BlogPost(post));
+    });
+    console.log(blogPosts);
+
+    blogPosts.forEach(function(element) {
+      var $blogPosts = $('#blogPosts');
+      $blogPosts.append(element.toHtml());
+    });
   });
 });

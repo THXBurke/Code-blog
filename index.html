@@ -13,19 +13,19 @@
     <link rel="stylesheet" href="themes.css"></link>
     <link rel="stylesheet" href="stylesheet.css"></link>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-    <script id="template" type="x-handlebars-template">
-      <article>
-        <div class="header">
-          <header class="headline">
-            <h2>{{{title}}}</h2>
-              <p class="publishedOn">Date Posted<time id="postedWhen">{{{posted}}}</time></p>
-              <section class="projectBrief" data-category={{{category}}}>{{{}}}</section>
-              <a class="slider" href="#">View More</a>
-          </header>
+    <script id="template" type="text/x-handlebars-template">
+    <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+      <header>
+        <h1>{{title}}</h1>
+        <div class="byline">
+          By <address><a href="{{authorUrl}}">{{author}}</a></address>
+          {{publishStatus}}
         </div>
-      </article>
-    </script>
+      </header>
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+  </script>
   <a name="home"></a>
   </head>
 
@@ -71,7 +71,7 @@
 <section id="personal">
   <blogPost id="aboutBlogPost">
     <h2>Rachel Burke in Context</h2>
-    <p>My classmates think I didn't own a computer until I started this class and that's a fun story. The truth is that I did but they were always very outdated hand me downs that caused me great frustration. One of them shut down pretty regularly just because it wanted to. Someone took pity on me and gave me one which was great except for the screen would pop out and I'd be left with green zig zags, some text and more frustration. I don't have anything against technology I just felt left out because I didn't understand it very well, couldn't affort to keep up with it and that all intimidated and confounded me.</p>
+    <p>I decided to learn code because I was technologically way behind and I was not comfortable with that. I wanted to see if I would like it and to my delight I discovered that I really do. But talk about a learning curve! The first folder I ever opened on a computer was my first day at Code Fellows. The more I learn the more I want to know.</p>
     <h2>Personal Life</h2>
     <ul class="personal">
       <li>Reading<p>What am I reading right now?</P></li>
@@ -80,6 +80,9 @@
       <li>Food<p>What I'm making and what inspires me.</p></li>
     </ul>
   </section>
+  <section id="blogPosts">
+    <h1>Blog Posts!</h1>
+  </section>
 </main>
   <ul>
     <li><a href="https://github.com/THXBurke" target="" <i class="fa fa-github-square"></i> GitHub </a></li>
@@ -87,13 +90,15 @@
     <li><a href="http://www.linkedin.com/in/rachelwheels/" class="fa fa-linkedin-square"> Linked In </a></li>
   </ul>
   <footer>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="blogPosts.js"></script>
-  <script src="portfolio.js"></script>
 <p>
   Code Fellows Student August 2015 to Current | rachelwheels@gmail.com
 </p>
   </footer>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="blogPosts.js"></script>
+  <script src="portfolio.js"></script>
 </body>
+
 </html>
